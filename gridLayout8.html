@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Örnek 8</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "ads article"
+            "nav article"
+            "nav footer"
+            ;
+            grid-template-columns: 1fr 4fr;
+            height: 1000px;
+            grid-template-rows: 100px 1fr 3fr 100px;
+            grid-gap: 10px;
+        }
+        .kutu1{
+            grid-area: header;
+        }
+        .kutu2{
+            grid-area: ads;
+        }
+        .kutu3{
+            grid-area: article;
+        }
+        .kutu4{
+            grid-area: nav;
+        }
+        .kutu5{
+            grid-area: footer;
+        }
+        #container > div{
+            background-color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="kutu1">Header Alanı</div>
+        <div class="kutu2">Reklam Alanı</div>
+        <div class="kutu3">İçerik Alanı</div>
+        <div class="kutu4">Menü Alanı</div>
+        <div class="kutu5">Footer Alanı</div>
+    </div>
+</body>
+</html>

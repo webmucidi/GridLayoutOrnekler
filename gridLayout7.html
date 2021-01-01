@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Örnek 7</title>
+</head>
+<style>
+    #kapsayici{
+        display: grid;
+        grid-template-areas: 
+        'nav header header header header'
+        'nav article article article article'
+        'nav ads ads ads ads'
+        'nav footer footer footer footer'
+        ;
+        grid-template-rows: 100px 1fr 100px 100px;
+        grid-gap: 10px;
+        height: 1000px;
+    }
+    .ust{
+        grid-area: header;
+    }
+    .menu{
+        grid-area: nav;
+    }
+    .icerik{
+        grid-area: article;
+    }
+    .reklam{
+        grid-area: ads;
+    }
+    .alt{
+        grid-area: footer;
+    }
+    #kapsayici > div{
+        background-color: tomato;
+    }
+</style>
+<body>
+    <div id="kapsayici">
+        <div class="ust">Header Alanı</div>
+        <div class="menu">Menü Alanı</div>
+        <div class="icerik">İçerik Alanı</div>
+        <div class="reklam">Reklam Alanı</div>
+        <div class="alt">Footer Alanı</div>
+    </div>
+</body>
+</html>

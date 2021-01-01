@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Örnek 6</title>
+    <style>
+        #grid-container{
+            display: grid;
+            grid-template-areas: 
+            'header header header header'
+            'menu article article article'
+            'menu article article article'
+            'menu article article article'
+            'menu reklams reklams reklams'
+            'footer footer footer footer'           
+            ;
+            grid-gap: 10px;
+            height: 1000px;
+            grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px;
+        }
+
+        .eleman1{
+            grid-area: header;
+        }
+        .eleman2{
+            grid-area: menu;
+        }
+        .eleman3{
+            grid-area: article;
+        }
+        .eleman4{
+            grid-area: reklams;
+        }
+        .eleman5{
+            grid-area: footer;
+
+        }
+
+        #grid-container > div{
+            background-color: turquoise;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="grid-container">
+        <div class="eleman1">Header Alanı</div>
+        <div class="eleman2">Menu Alanı</div>
+        <div class="eleman3">İçerik Alanı</div>
+        <div class="eleman4">Reklam Alanı</div>
+        <div class="eleman5">Footer Alanı</div>
+    </div>
+</body>
+</html>

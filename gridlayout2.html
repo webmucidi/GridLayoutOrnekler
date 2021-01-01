@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout 2</title>
+    <style>
+        #kapsayici{
+            display: grid;
+            grid-template-columns: 4fr 1fr 1fr;
+            grid-template-rows: 100px 1fr 100px;
+            height: 1000px;
+            grid-gap: 10px;
+        }
+
+        #kapsayici > div{
+            background-color: violet;
+        }
+
+        .ust{
+            grid-column: 1/4;
+            grid-row: 1/2;
+        }
+
+        .icerik{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .menu{
+            grid-column: 2/3;
+            grid-row: 2/4;
+
+        }
+
+        .ads{
+            grid-column: 3/4;
+            grid-row: 2/4;
+        }
+
+        .alt{
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="kapsayici">
+        <div class="ust"></div>
+        <div class="icerik">sss</div>
+        <div class="menu"></div>
+        <div class="ads">aaa</div>
+        <div class="alt"></div>
+    </div>
+</body>
+</html>

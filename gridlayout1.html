@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout 1</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1.5fr 5fr 1fr;
+            grid-template-rows: 1fr 8fr 1fr;
+            grid-gap: 10px;
+            height: 1000px;
+        }
+        .grid-container > div{
+            background-color: yellowgreen; 
+        }
+        .eleman1{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .eleman2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .eleman5{
+            grid-column: 2/4;
+
+        }     
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="eleman1">HEADER ALANI</div>
+        <div class="eleman2">NAV MENU ALANI</div>
+        <div class="eleman3">ARTICLE İÇERİK ALANI</div>
+        <div class="eleman4">ADS REKLAM ALANI</div>
+        <div class="eleman5">FOOTER ALANI</div>
+    </div>
+</body>
+</html>
